@@ -167,17 +167,6 @@ public class Struct {
 		return unpack(f, size, format, new ByteStream(string));
 	}
 
-// TODO: PyArray	
-//	public static Object[] unpack(final String format, final PyArray buffer) {
-//		final String string = buffer.tostring();
-//		final FormatDef[] f = whichtable(format);
-//		final int size = calcsize(format, f);
-//		final int len = string.length();
-//		if (size != len)
-//			throw StructError("unpack str size does not match format");
-//		return unpack(f, size, format, new ByteStream(string));
-//	}
-
 	public static Object[] unpack_from(final String format, final String string) {
 		return unpack_from(format, string, 0);
 	}
