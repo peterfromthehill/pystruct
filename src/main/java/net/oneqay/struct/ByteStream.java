@@ -1,5 +1,7 @@
 package net.oneqay.struct;
 
+import java.util.Arrays;
+
 public class ByteStream {
 	char[] data;
 	int len;
@@ -23,6 +25,17 @@ public class ByteStream {
 		pos = 0;
 
 //        System.out.println("s.length()=" + s.length() + ",offset=" + offset + ",size=" + size + ",data=" + Arrays.toString(data));
+	}
+
+	ByteStream(final char[] a) {
+		this(a, 0);
+	}
+
+	ByteStream(final char[] a, final int offset) {
+		final int size = a.length - offset;
+		data = Arrays.copyOf(a, size);
+		len = size;
+		pos = 0;
 	}
 
 	public int readByte() {

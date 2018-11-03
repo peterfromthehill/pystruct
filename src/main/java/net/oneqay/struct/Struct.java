@@ -158,11 +158,21 @@ public class Struct {
 		}
 	}
 
+	public static Object[] unpack(final String format, final char[] array) {
+		final FormatDef[] f = whichtable(format);
+		final int size = calcsize(format, f);
+		final int len = array.length;
+		if (size != len)
+			throw new StructError("unpack str size does not match format");
+		return unpack(f, size, format, new ByteStream(array));
+
+	}
+
 	public static Object[] unpack(final String format, final String string) {
 		final FormatDef[] f = whichtable(format);
 		final int size = calcsize(format, f);
 		final int len = string.length();
-		if (size != len)
+		if (size > len)
 			throw new StructError("unpack str size does not match format");
 		return unpack(f, size, format, new ByteStream(string));
 	}
