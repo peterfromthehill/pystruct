@@ -15,6 +15,6 @@ public class BEUnsignedIntFormatDef extends FormatDef {
         if (v < 0) {
             v += 0x100000000L;
         }
-        return new Long(v);
+        return Long.valueOf(v);
     }
 }

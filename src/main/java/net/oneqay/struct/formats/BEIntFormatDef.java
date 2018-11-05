@@ -11,6 +11,6 @@ public class BEIntFormatDef extends FormatDef {
 
     @Override
     protected Object unpack(final ByteStream buf) {
-        return new Integer(BEreadInt(buf));
+        return Integer.valueOf(BEreadInt(buf));
     }
 }

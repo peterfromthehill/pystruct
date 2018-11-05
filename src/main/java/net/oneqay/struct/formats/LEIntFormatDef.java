@@ -12,6 +12,6 @@ public class LEIntFormatDef extends FormatDef {
     @Override
     protected Object unpack(final ByteStream buf) {
         final int v = LEreadInt(buf);
-        return new Integer(v);
+        return Integer.valueOf(v);
     }
 }

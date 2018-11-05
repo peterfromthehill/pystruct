@@ -18,6 +18,6 @@ public class LELongFormatDef extends FormatDef {
         final long low = LEreadInt(buf) & 0x00000000FFFFFFFFL;
         final long high = ((long) (LEreadInt(buf)) << 32) & 0xFFFFFFFF00000000L;
         final long result = (high | low);
-        return new Long(result);
+        return Long.valueOf(result);
     }
 }

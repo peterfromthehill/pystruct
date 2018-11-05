@@ -6,6 +6,6 @@ public class LEUnsignedShortFormatDef extends LEShortFormatDef {
     @Override
     protected Object unpack(final ByteStream buf) {
         final int v = buf.readByte() | (buf.readByte() << 8);
-        return new Integer(v);
+        return Integer.valueOf(v);
     }
 }

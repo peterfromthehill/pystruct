@@ -27,6 +27,6 @@ public class BEUnsignedLongFormatDef extends FormatDef {
         java.math.BigInteger result = java.math.BigInteger.valueOf(high);
         result = result.multiply(java.math.BigInteger.valueOf(0x100000000L));
         result = result.add(java.math.BigInteger.valueOf(low));
-        return new Long(result.longValue());
+        return Long.valueOf(result.longValue());
     }
 }

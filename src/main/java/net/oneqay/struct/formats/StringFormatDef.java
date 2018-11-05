@@ -30,6 +30,6 @@ public class StringFormatDef extends FormatDef {
 
     @Override
     protected void doUnpack(final ByteStream buf, final int count, final List<Object> list) {
-        list.add(new String(buf.readString(count)));
+        list.add(buf.readString(count));
     }
 }

@@ -5,13 +5,13 @@ import java.util.Arrays;
 public class ByteStream {
     char[] data;
 
-    int len;
+//    int len;
 
     int pos;
 
     ByteStream() {
         data = new char[10];
-        len = 0;
+//        len = 0;
         pos = 0;
     }
 
@@ -23,7 +23,7 @@ public class ByteStream {
         final int size = s.length() - offset;
         data = new char[size];
         s.getChars(offset, s.length(), data, 0);
-        len = size;
+//        len = size;
         pos = 0;
 
 //        System.out.println("s.length()=" + s.length() + ",offset=" + offset + ",size=" + size + ",data=" + Arrays.toString(data));
@@ -36,7 +36,7 @@ public class ByteStream {
     ByteStream(final char[] a, final int offset) {
         final int size = a.length - offset;
         data = Arrays.copyOf(a, size);
-        len = size;
+//        len = size;
         pos = 0;
     }
 

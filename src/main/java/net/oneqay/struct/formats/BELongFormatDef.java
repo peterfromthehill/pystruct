@@ -18,6 +18,6 @@ public class BELongFormatDef extends FormatDef {
         final long high = ((long) (BEreadInt(buf)) << 32) & 0xFFFFFFFF00000000L;
         final long low = BEreadInt(buf) & 0x00000000FFFFFFFFL;
         final long result = (high | low);
-        return new Long(result);
+        return Long.valueOf(result);
     }
 }

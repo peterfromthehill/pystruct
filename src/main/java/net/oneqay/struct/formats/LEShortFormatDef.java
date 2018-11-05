@@ -17,6 +17,6 @@ public class LEShortFormatDef extends FormatDef {
         if (v > Short.MAX_VALUE) {
             v -= 0x10000;
         }
-        return new Integer(v);
+        return Integer.valueOf(v);
     }
 }
