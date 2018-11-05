@@ -18,6 +18,6 @@ public class LEDoubleFormatDef extends FormatDef {
         if ((Double.isInfinite(v) || Double.isNaN(v))) { // PyFloat.double_format == PyFloat.Format.UNKNOWN &&
             throw new RuntimeException("can't unpack IEEE 754 special value on non-IEEE platform");
         }
-        return new Float(v);
+        return Float.valueOf((float) v);
     }
 }

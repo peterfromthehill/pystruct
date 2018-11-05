@@ -17,6 +17,6 @@ public class BEFloatFormatDef extends FormatDef {
         if ((Float.isInfinite(v) || Float.isNaN(v))) { // PyFloat.float_format == PyFloat.Format.UNKNOWN &&
             throw new RuntimeException("can't unpack IEEE 754 special value on non-IEEE platform");
         }
-        return new Float(v);
+        return Float.valueOf(v);
     }
 }
