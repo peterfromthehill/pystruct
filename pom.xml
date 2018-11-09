@@ -15,13 +15,15 @@
     <dependency>
       <groupId>junit</groupId>
       <artifactId>junit</artifactId>
-      <version>4.9</version>
+      <version>4.12</version>
       <scope>test</scope>
     </dependency>
   </dependencies>
   <build>
     <plugins>
       <plugin>
+      <!-- mvn versions:display-plugin-updates -->
+      <!-- mvn versions:display-dependency-updates -->
         <groupId>org.codehaus.mojo</groupId>
         <artifactId>versions-maven-plugin</artifactId>
         <version>2.7</version>
@@ -58,6 +60,7 @@
         <configuration>
           <source>1.8</source>
           <target>1.8</target>
+<!-- 		<release>11</release> -->
           <compilerArgs>
             <arg>-Xlint:all</arg>
           </compilerArgs>

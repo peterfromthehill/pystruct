@@ -63,7 +63,7 @@ public class FormatDef {
 
     protected BigInteger get_ulong(final Object value) {
         if (value instanceof Long) {
-            final BigInteger v = (BigInteger) value;
+            final BigInteger v = BigInteger.valueOf((Long) value);
             if (v.compareTo(BigInteger.valueOf(Long.MAX_VALUE)) > 0) {
                 throw new StructError("unsigned long int too long to convert");
             }
